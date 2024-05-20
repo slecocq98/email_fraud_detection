@@ -1,0 +1,24 @@
+{
+    "default": {
+        "id": "default",
+        "name": "default",
+        "accuracy": 0.943,
+        "train_date": "2024-03-18 12:44",
+        "serving": true,
+        "params": {
+            "model_params": {
+                "n_estimators": 50,
+                "learning_rate": 0.1
+            },
+            "tf_idf_params": {
+                "ngram_range": [
+                    3,
+                    5
+                ],
+                "strip_accents": "unicode",
+                "analyzer": "char",
+                "max_features": 500
+            }
+        }
+    }
+}
