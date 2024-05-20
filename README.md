@@ -254,7 +254,7 @@ curl --request PUT \
 ```
 
 
-# Report on API Modifications and Areas for Improvement
+# Report on API modifications and way of improvement
 I placed myself in a more realistic scenario with a large number of users. It seemed more pertinent to use well-known frameworks for asynchronous processing, parallelism, and queue management: FastAPI and Celery.
 
 ## The missing steps for production deployment are:
@@ -274,7 +274,7 @@ I placed myself in a more realistic scenario with a large number of users. It se
 - Cost reduction by implementing stop_worker and start_worker if this API is used sporadically.
 
 
-## What I Would Have Done Differently:
+## What I would have done differently:
 
 - No model training directly within the application, and an output label rather than a score. Instead, train the model beforehand, then store it (on Amazon S3, for example), and download it in the application at initialization. The reasons:
 - Better model selection, results analysis, and threshold selection.
